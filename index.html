@@ -127,7 +127,7 @@ function setGlyphTable (table) {
   table.empty()
   for (var i = 0; i < yadvance; i++) {
     var row = $('<tr></tr>')
-    for (var j = 0; j < xadvance; j++) {
+    for (var j = 0; j < max(right, xadvance); j++) {
       var cell = $('<td></td>').addClass('cell').attr('data-x', j).attr('data-y', i)
       if (i < top || i >= bottom || j < left || j >= right) {
         cell.addClass('dead')
